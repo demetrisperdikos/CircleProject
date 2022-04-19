@@ -1,0 +1,29 @@
+Given the class Point below, define a class Circle that represent a circle with a given center and radius. The Circle class should have a center attribute named center as well as a floating point radius The center is a point object, defined by the class Point. The class should also have these members:
+the constructor of the class, which should take parameters to initialize all attributes
+a getter for each instance data
+a setter for each instance data
+a toString() method that returns the summary of a Circle object
+public class Point
+{
+    private int x, y;
+
+    public Point(int newX, int newY)
+    {
+       x = newX;
+       y = newY;
+    }
+    public String toString()
+    {
+       return "x:"+x+","+"y:"+y;
+    }
+    public double distance(Point other)
+    {
+       return Math.sqrt(Math.pow(x-other.x,2)+Math.pow(y-other.y,2));
+     }
+}
+ 
+
+Write an application CircleTest that first creates two Points objects, point1 with random coordinates from 1 to 10, inclusive, and point2 with coordinates 0,0. The program will then instantiate two circles with the following radius/center requirements:
+Radius entered from the keyboard and point2 as the center
+Radius 5.5 and point1 as the center
+     The program prints to the screen the summary of each circle as well as the distance between their centers (for full credit, you  MUST use the circle  objects).
